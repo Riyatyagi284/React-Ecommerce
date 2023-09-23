@@ -1,6 +1,31 @@
-import React from "react";
+import React,{ lazy, Suspense } from "react";
 import styles from "./style";
-const { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } = React.lazy(() => import ("./components"))
+// const { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } = React.lazy(() => import ("./components"))
+
+const {
+  Billing,
+  Business,
+  CardDeal,
+  Clients,
+  CTA,
+  Footer,
+  Navbar,
+  Stats,
+  Testimonials,
+  Hero,
+} ={
+  Billing: lazy(() => import("./components/Billing")),
+  Business: lazy(() => import("./components/Business")),
+  CardDeal: lazy(() => import("./components/CardDeal")),
+  Clients: lazy(() => import("./components/Clients")),
+  CTA: lazy(() => import("./components/CTA")),
+  Footer: lazy(() => import("./components/Footer")),
+  Navbar: lazy(() => import("./components/Navbar")),
+  Stats: lazy(() => import("./components/Stats")),
+  Testimonials: lazy(() => import("./components/Testimonials")),
+  Hero: lazy(() => import("./components/Hero")),
+};
+
 
 
 const App = () => (
